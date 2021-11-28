@@ -1,0 +1,20 @@
+* Creating a personal access token 
+  - got to github -> settingg -> Deveploper settings
+    https://github.com/settings/tokens
+  - generate new token, it will show token only ones. When you close
+    the tab it wont show token again. So you can save it somewhere
+    else or generage new one. Also you can delete previous
+    tokens. This token will be used when git prompts /password/ in
+    command line.
+* Create empty project in github
+* Add existing project to github
+  - Go to inside project folder and run following commands 
+    #+begin_src shell
+    git remote add origin https://github.com/<user>/<project_name>.git
+    git branch -M main
+    #+end_src
+  - Push an existing reposity. When git prompts password after user
+    name, use token from first step.
+    #+begin_src shell
+    git push -u origin main    
+    #+end_src
