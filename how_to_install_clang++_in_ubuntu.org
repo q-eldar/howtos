@@ -1,0 +1,28 @@
+The Rational of this howto is install clang properly so you wont have
+have [[https://askubuntu.com/questions/516801/clang-fails-to-compile-simple-hello-world-c-program][this type of issue]].
+
+* Install gcc, g++
+  - You can install any version of this compiler, to work with clang
+    it must be matched with [[https://gcc.gnu.org/onlinedocs/libstdc++/faq.html][libstdc++]] version.
+    #+begin_src ipython :results output :session
+    sudo apt install gcc-8 g++-8
+    #+end_src
+* Install clang, clang++
+  
+  #+begin_src ipython :results output :session
+  sudo apt install clang-8
+  #+end_src
+
+* Install libstdc++ 
+
+  #+begin_src ipython :results output :session
+  sudo apt install libstdc++-8-dev
+  #+end_src
+
+* Export CC, CXX
+
+  #+begin_src ipython :results output :session
+  export CC=clang
+  export CXX=clang++
+  #+end_src
+
